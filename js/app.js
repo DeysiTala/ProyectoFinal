@@ -42,15 +42,26 @@ function mostrar(estudiante) {
 function mostrarLista(estudiantes) {
     // TO DO: Iterar la lista del estudiantes para devolverlos en el formato que usa la función mostrar(estudiante)
     // Retornar el template de todos los estudiantes
-
+    var list = "";
+    for(var i in estudiantes)
+    {
+      lista += mostrar(estudiantes[i]);
+    }
+    return list;
 }
 
 function buscar(nombre, estudiantes) {
     // TO DO: Buscar el nombre en la lista de estudiantes que se recibe por parámetros
     // Retornar el objeto del estudiante buscado
     // Nota: NO IMPORTA SI EL USUARIO ESCRIBE EL NOMBRE EN MAYÚSCULAS O MINÚSCULAS
+    for(var i in estudiantes)
+    {
+      if(estudiantes[i].nombre.toLowerCase() == nombre.toLowerCase())
 
-}
+      }
+      return estudiantes[i];
+    }
+
 
 function topTecnico(estudiantes) {
     // TO DO: Retornar el arreglo de estudiantes ordenado por puntaje técnico de mayor a menor
